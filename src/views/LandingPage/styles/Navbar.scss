@@ -1,4 +1,7 @@
 .nav-container {
+  position: absolute;
+  z-index: 1;
+  width: 100vw;
   padding-top: 20px;
   padding-bottom: 50px;
   background-image: url("../../../assets/nav-bg.svg");
