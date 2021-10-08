@@ -1,5 +1,11 @@
 import React from "react";
-import { Typography, Button } from "antd";
+import { Typography, Button, Row, Col, Avatar } from "antd";
+import {
+  UserAddOutlined,
+  CloudUploadOutlined,
+  EyeOutlined,
+  WalletOutlined,
+} from "@ant-design/icons";
 import { Link } from "react-router-dom";
 
 import "./styles/Hero.scss";
@@ -23,6 +29,46 @@ const Hero = () => {
           <Button className="hero-btn">
             <Link to="/">UPLOAD MOVIES</Link>
           </Button>
+        </div>
+      </div>
+      <div className="step-container">
+        <div className="container">
+          <Row className="step-row">
+            <Col span={6} className="step-col">
+              <Avatar className="step-icon">
+                <UserAddOutlined />
+              </Avatar>
+              <h2>Sign Up</h2>
+              <p>Create an account with us to get started</p>
+            </Col>
+            <Col span={6} className="step-col">
+              <Avatar className="step-icon">
+                <CloudUploadOutlined />
+              </Avatar>
+              <h2>Upload Movies</h2>
+              <p>Upload your movies instantly and start seeing result</p>
+            </Col>
+            <Col span={6} className="step-col">
+              <Avatar className="step-icon">
+                <EyeOutlined />
+              </Avatar>
+              <h2>More Views, More Income</h2>
+              <p>
+                You can see all the views on every movie uploaded. You get paid
+                for every view
+              </p>
+            </Col>
+            <Col span={6} className="step-col" style={{ border: "none" }}>
+              <Avatar className="step-icon">
+                <WalletOutlined />
+              </Avatar>
+              <h2>Free Wallet</h2>
+              <p>
+                You get a wallet where all revenues from movie views are paid
+                and you can transfer to your bank accounts
+              </p>
+            </Col>
+          </Row>
         </div>
       </div>
     </section>
