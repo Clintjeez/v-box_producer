@@ -5,6 +5,7 @@ import Hero from "./Hero";
 import Showcase from "./Showcase";
 import Producers from "./Producers";
 import MobileAppBanner from "./MobileAppBanner";
+import Footer from "./Footer";
 
 const LandingPage = () => {
   return (
@@ -14,6 +15,7 @@ const LandingPage = () => {
       <Showcase />
       <Producers />
       <MobileAppBanner />
+      <Footer />
     </>
   );
 };
