@@ -1,16 +1,17 @@
 .card-wrapper {
   width: 228px;
-  background: #fefefe;
   border-radius: 8px;
   margin: 0 20px;
-
   .movie-img {
     width: 228px;
   }
 
   .card-footer {
     padding: 15px 10px 5px 10px;
+    background: #fefefe;
     color: #828282;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
     .movie-title {
       color: #29aae2;
       font-weight: bold;
@@ -48,6 +49,16 @@
     .rating {
       font-size: 15px;
       margin-right: 10px;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .card-wrapper {
+    width: 100%;
+    padding: 0 10px;
+    .movie-img {
+      width: 100%;
     }
   }
 }
