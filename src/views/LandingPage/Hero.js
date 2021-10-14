@@ -34,21 +34,21 @@ const Hero = () => {
       <div className="step-container">
         <div className="container">
           <Row className="step-row">
-            <Col span={6} className="step-col">
+            <Col className="step-col" xs={12} sm={12} md={6} lg={6} xl={6}>
               <Avatar className="step-icon">
                 <UserAddOutlined />
               </Avatar>
               <h2>Sign Up</h2>
               <p>Create an account with us to get started</p>
             </Col>
-            <Col span={6} className="step-col">
+            <Col className="step-col" xs={12} sm={12} md={6} lg={6} xl={6}>
               <Avatar className="step-icon">
                 <CloudUploadOutlined />
               </Avatar>
               <h2>Upload Movies</h2>
               <p>Upload your movies instantly and start seeing result</p>
             </Col>
-            <Col span={6} className="step-col">
+            <Col className="step-col" xs={12} sm={12} md={6} lg={6} xl={6}>
               <Avatar className="step-icon">
                 <EyeOutlined />
               </Avatar>
@@ -58,7 +58,15 @@ const Hero = () => {
                 for every view
               </p>
             </Col>
-            <Col span={6} className="step-col" style={{ border: "none" }}>
+            <Col
+              className="step-col"
+              style={{ border: "none" }}
+              xs={12}
+              sm={12}
+              md={6}
+              lg={4}
+              xl={4}
+            >
               <Avatar className="step-icon">
                 <WalletOutlined />
               </Avatar>

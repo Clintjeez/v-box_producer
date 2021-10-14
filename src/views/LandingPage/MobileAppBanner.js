@@ -13,7 +13,7 @@ const MobileAppBanner = () => {
     <section className="app-banner">
       <div className="container">
         <Row>
-          <Col span={12}>
+          <Col sm={24} md={24} lg={12}>
             <div className="app-banner-content">
               <h3 className="title">Get your viewers on V-Box, Download now</h3>
               <p className="txt">Get your viewers on V-Box, Download now</p>
@@ -36,7 +36,7 @@ const MobileAppBanner = () => {
               </Button>
             </div>
           </Col>
-          <Col span={12} className="preview-wrapper">
+          <Col sm={24} md={24} lg={12} className="preview-wrapper">
             {/* <img src={appPreview} className="preview-img" /> */}
           </Col>
         </Row>

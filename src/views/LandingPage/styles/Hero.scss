@@ -1,6 +1,6 @@
 .hero-container {
   position: relative;
-  height: 100vh;
+  //height: 100vh;
   background-image: linear-gradient(
       252deg,
       rgba(0, 0, 0, 0.55) 50%,
@@ -10,7 +10,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   padding-top: 160px;
-  padding-bottom: 270px;
+  padding-bottom: 0;
 
   .hero-content {
     width: 55%;
@@ -57,7 +57,6 @@
   .step-container {
     text-align: center;
     color: #fff;
-    height: 300px;
     background: linear-gradient(
       180deg,
       rgba(5, 36, 66, 0.1) 0%,
@@ -65,7 +64,7 @@
       #020a13 79.1%
     );
     margin-top: 70px;
-
+    padding: 40px 0;
     .step-row {
       padding: 15px 0;
       border-bottom: solid 1px #a8a8a8a2;
@@ -90,7 +89,121 @@
       p {
         font-size: 16px;
         font-weight: 300;
-        opacity: 0.8;
+        color: rgb(192, 192, 192);
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-container {
+    padding-top: 120px;
+
+    .hero-content {
+      width: 100%;
+      margin-left: 0;
+      text-align: center;
+      padding: 10px 20px;
+
+      .hero-sub-title {
+        font-size: 16px;
+      }
+      .hero-title {
+        font-size: 23px;
+        font-weight: bold;
+        margin: 20px 0;
+      }
+      .hero-btn {
+        margin-top: 35px;
+      }
+    }
+  }
+
+  .step-container {
+    .step-col {
+      border-right: none !important;
+      padding: 0;
+      h2 {
+        font-size: 18px;
+      }
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-container {
+    padding-top: 120px;
+
+    .hero-content {
+      width: 100%;
+      margin-left: 0;
+      text-align: center;
+      padding: 10px 20px;
+
+      .hero-sub-title {
+        font-size: 16px;
+      }
+      .hero-title {
+        font-size: 23px;
+        font-weight: bold;
+        margin: 20px 0;
+      }
+      .hero-btn {
+        margin-top: 35px;
+      }
+    }
+  }
+
+  .step-container {
+    position: relative;
+    .step-col {
+      border-right: none !important;
+      h2 {
+        font-size: 18px;
+      }
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero-container {
+    padding-top: 120px;
+    .hero-content {
+      width: 100%;
+      margin-left: 0;
+      text-align: center;
+      padding: 10px 20px;
+
+      .hero-sub-title {
+        font-size: 16px;
+      }
+      .hero-title {
+        font-size: 23px;
+        font-weight: bold;
+        margin: 20px 0;
+      }
+      .hero-btn {
+        margin-top: 35px;
+      }
+    }
+  }
+
+  .step-container {
+    position: relative;
+
+    .step-col {
+      border-right: none !important;
+      h2 {
+        font-size: 18px;
+      }
+      p {
+        font-size: 14px;
       }
     }
   }
