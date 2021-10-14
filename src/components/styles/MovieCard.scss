@@ -1,0 +1,53 @@
+.card-wrapper {
+  width: 228px;
+  background: #fefefe;
+  border-radius: 8px;
+  margin: 0 20px;
+
+  .movie-img {
+    width: 228px;
+  }
+
+  .card-footer {
+    padding: 15px 10px 5px 10px;
+    color: #828282;
+    .movie-title {
+      color: #29aae2;
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 22px;
+      margin-bottom: 15px;
+    }
+    .flex-row {
+      display: flex;
+    }
+    .stats {
+      justify-content: space-between;
+    }
+    .views {
+      .views-icon {
+        font-size: 14px;
+        margin-right: 10px;
+      }
+      .views-txt {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 14px;
+      }
+    }
+    .likes {
+      .likes-txt {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 14px;
+      }
+      .likes-icon {
+        margin-right: 2px;
+      }
+    }
+    .rating {
+      font-size: 15px;
+      margin-right: 10px;
+    }
+  }
+}
