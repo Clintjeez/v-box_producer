@@ -98,12 +98,13 @@
 @media (max-width: 480px) {
   .hero-container {
     padding-top: 120px;
+    background-size: auto;
 
     .hero-content {
       width: 100%;
       margin-left: 0;
       text-align: center;
-      padding: 10px 20px;
+      padding: 20px 10px;
 
       .hero-sub-title {
         font-size: 16px;
@@ -112,6 +113,9 @@
         font-size: 23px;
         font-weight: bold;
         margin: 20px 0;
+      }
+      .hero-txt {
+        margin-top: 40px;
       }
       .hero-btn {
         margin-top: 35px;
@@ -139,9 +143,10 @@
 
     .hero-content {
       width: 100%;
+      margin-top: 60px;
       margin-left: 0;
       text-align: center;
-      padding: 10px 20px;
+      padding: 20px 10px;
 
       .hero-sub-title {
         font-size: 16px;

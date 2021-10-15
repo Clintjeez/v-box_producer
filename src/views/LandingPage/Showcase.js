@@ -1,11 +1,9 @@
 import React from "react";
 import { moviesData } from "../../services/moviesData";
 import MovieCard from "../../components/MovieCard";
-import { Swiper, SwiperSlide } from "swiper/react";
 import Slider from "react-slick";
 
 import "./styles/Showcase.scss";
-import "swiper/swiper.scss";
 
 const Showcase = () => {
   const settings = {
@@ -14,8 +12,8 @@ const Showcase = () => {
     speed: 500,
     slidesToShow: 5,
     slidesToScroll: 3,
-
     initialSlide: 0,
+    centerMode: true,
     responsive: [
       {
         breakpoint: 1024,
@@ -29,7 +27,7 @@ const Showcase = () => {
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
           slidesToScroll: 2,
           initialSlide: 2,
         },
@@ -39,6 +37,7 @@ const Showcase = () => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          initialSlide: 1,
         },
       },
     ],

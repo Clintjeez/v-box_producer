@@ -100,6 +100,18 @@ footer {
 
 @media (max-width: 1040px) {
   .footer-wrapper {
-    flex-direction: column;
+    flex-direction: column-reverse;
+
+    .brand-col {
+      margin-top: 15px;
+    }
+    .links-col {
+      margin-top: 40px;
+    }
+    .newsletter-col {
+      .newsletter-form {
+        padding-top: 20px !important;
+      }
+    }
   }
 }
