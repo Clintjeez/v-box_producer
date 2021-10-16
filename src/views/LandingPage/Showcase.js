@@ -10,10 +10,10 @@ const Showcase = () => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 5,
+    slidesToShow: 4,
     slidesToScroll: 3,
     initialSlide: 0,
-    centerMode: true,
+
     responsive: [
       {
         breakpoint: 1024,
@@ -22,6 +22,7 @@ const Showcase = () => {
           slidesToScroll: 3,
           infinite: true,
           dots: true,
+          centerMode: true,
         },
       },
       {
@@ -30,6 +31,7 @@ const Showcase = () => {
           slidesToShow: 1,
           slidesToScroll: 2,
           initialSlide: 2,
+          centerMode: true,
         },
       },
       {
@@ -38,6 +40,7 @@ const Showcase = () => {
           slidesToShow: 1,
           slidesToScroll: 1,
           initialSlide: 1,
+          centerMode: true,
         },
       },
     ],
