@@ -20,7 +20,7 @@ const Navbar = () => {
             </Typography.Title>
           </div>
           <Button className="nav-btn">
-            <Link to="/">SIGN IN</Link>
+            <Link to="/login">SIGN IN</Link>
           </Button>
         </div>
       </div>

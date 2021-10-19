@@ -1,15 +1,26 @@
 import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import "./App.scss";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import LandingPage from "./views/LandingPage";
+import Auth from "./views/OnboardingPages/Auth";
 
 const App = () => {
   return (
     <>
-      <LandingPage />
+      <Router>
+        <Switch>
+          <Route exact path="/">
+            <LandingPage />
+          </Route>
+          <Route path="/login">
+            <Auth />
+          </Route>
+        </Switch>
+      </Router>
     </>
   );
 };
