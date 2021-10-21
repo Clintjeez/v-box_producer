@@ -4,7 +4,11 @@ import { Form, Input, Button, Checkbox } from "antd";
 
 import "./styles/Signup.scss";
 
-const Signup = () => {
+const Signup = ({ history }) => {
+  const onSubmit = () => {
+    history.push("/verify");
+  };
+
   return (
     <div className="signup">
       <div className="container d-flex">
@@ -25,6 +29,7 @@ const Signup = () => {
               remember: true,
             }}
             autoComplete="on"
+            onFinish={onSubmit}
           >
             <Form.Item
               name="phone"
