@@ -1,4 +1,4 @@
-.login {
+.signup2 {
   text-align: center;
   padding: 40px;
   .d-flex {
@@ -44,7 +44,8 @@
         font-size: 18px;
         margin: 15px 0 5px 0;
       }
-      #login_password.ant-input {
+      #login_password.ant-input,
+      #login_confirm.ant-input {
         background: transparent;
         font-size: 18px;
       }
@@ -62,8 +63,5 @@
         border-radius: 5px;
       }
     }
-  }
-  .link-txt {
-    font-size: 18px;
   }
 }

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import OtpInput from "react-otp-input";
 import { Button } from "antd";
 
@@ -30,9 +31,11 @@ const Verify = () => {
               separator={<span> </span>}
               isInputNum="true"
             />
-            <Button type="primary" htmlType="submit" className="auth-btn">
-              Continue
-            </Button>
+            <Link to="/signup2">
+              <Button type="primary" htmlType="submit" className="auth-btn">
+                Continue
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
