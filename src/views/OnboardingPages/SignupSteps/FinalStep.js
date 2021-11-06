@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "antd";
 
+import "../styles/Signup.scss";
+
 const FinalStep = () => {
   return (
     <div className="form-wrapper">
@@ -22,9 +24,11 @@ const FinalStep = () => {
           Please check your inbox and click on the verification link sent to
           your email
         </p>
-        <Link to="/">
-          <Button className="auth-btn">Set Up My Profile</Button>
-        </Link>
+        <div className="form-group">
+          <Link to="/">
+            <Button className="auth-btn">Set Up My Profile</Button>
+          </Link>
+        </div>
       </div>
     </div>
   );

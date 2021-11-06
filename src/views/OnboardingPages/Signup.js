@@ -14,9 +14,9 @@ const Signup = ({ history }) => {
     <div className="wrapper">
       <div className="container d-flex">
         <Steps>
-          <Step component={SignupStep} />
-          <Step component={VerifyStep} />
+          {/* <Step component={SignupStep} /> */}
           <Step component={AccountStep} />
+          <Step component={VerifyStep} />
           <Step component={FinalStep} />
         </Steps>
       </div>

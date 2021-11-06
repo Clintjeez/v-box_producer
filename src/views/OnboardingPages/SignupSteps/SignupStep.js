@@ -17,7 +17,7 @@ const SignupStep = (props) => {
       </div>
       <Form
         className="form-group"
-        name="login"
+        name="register"
         initialValues={{
           remember: true,
         }}
