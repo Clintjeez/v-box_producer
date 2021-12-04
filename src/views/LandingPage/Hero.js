@@ -27,7 +27,7 @@ const Hero = () => {
             mobile data to stream on our platform
           </p>
           <Button className="hero-btn">
-            <Link to="/">UPLOAD MOVIES</Link>
+            <Link to="/login">UPLOAD MOVIES</Link>
           </Button>
         </div>
       </div>
