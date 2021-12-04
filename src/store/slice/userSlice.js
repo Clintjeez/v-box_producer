@@ -1,5 +1,4 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import ActionButton from "antd/lib/modal/ActionButton";
+import { createSlice } from "@reduxjs/toolkit";
 
 const UserSlice = createSlice({
   name: "user",

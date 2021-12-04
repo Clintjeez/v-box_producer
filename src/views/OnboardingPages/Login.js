@@ -121,7 +121,7 @@ const Login = ({ history }) => {
               </Button>
             </Form.Item>
           </Form>
-          <Link className="link-txt" to="/">
+          <Link className="link-txt" to="/forget-password">
             Forget password?
           </Link>
         </div>
