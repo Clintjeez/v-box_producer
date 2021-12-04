@@ -1,5 +1,6 @@
 import React from "react";
-import { Form, Input, Button, Checkbox } from "antd";
+import { Form, Button } from "antd";
+import TextField from "@mui/material/TextField";
 
 import "../styles/Signup.scss";
 
@@ -33,12 +34,18 @@ const SignupStep = (props) => {
             },
           ]}
         >
-          <Input
+          {/* <Input
             className="auth-input"
             style={{
               width: "100%",
             }}
             placeholder="Enter Phone Number"
+          /> */}
+          <TextField
+            id="phone_number"
+            label="Phone Number"
+            variant="outlined"
+            className="auth-input"
           />
         </Form.Item>
 

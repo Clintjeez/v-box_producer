@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { Form, Input, Button, Checkbox, notification } from "antd";
+// import { Link } from "react-router-dom";
+import { Form, Button, notification } from "antd";
+import TextField from "@mui/material/TextField";
 
 import { signupHandler, verifyRequest } from "../../../services/authService";
 
@@ -9,11 +10,11 @@ import "../styles/Signup.scss";
 const AccountStep = (props) => {
   const [loading, setLoading] = useState(false);
 
-  const nextSlide = () => {
-    //props.next;
-  };
+  // const nextSlide = (props) => {
+  //   props.next;
+  // };
 
-  const onFinish = (values) => {
+  const onSubmit = async (values) => {
     const data = {
       fullname: values.fullname,
       email: values.email,
@@ -22,26 +23,30 @@ const AccountStep = (props) => {
       rpassword: values.confirm,
     };
     setLoading(true);
-    signupHandler(data).then((res) => {
-      console.log(res);
-      notification.success({
-        message: "Account created",
-        description: "Your account has been created successfully",
-      });
-      nextSlide();
-    });
-    verifyRequest(data.telephone)
+    await signupHandler(data)
       .then((res) => {
         console.log(res);
+        notification.success({
+          message: "Account created",
+          description: "Your account has been created successfully",
+        });
+        props.next();
       })
+      // await verifyRequest(data.telephone)
+      //   .then((res) => {
+      //     console.log(res);
+      //   })
       .catch((err) => {
-        console.log(err);
+        console.log("erros", err.response);
+        console.log(err.response.data.errors[0]?.message);
         notification.error({
           message: "Error",
-          description: err.response?.errors?.message,
+          description: err.response
+            ? err.response.data.errors[0]?.message
+            : "Error occured",
         });
-      })
-      .finally(() => setLoading(false));
+      });
+    setLoading(false);
   };
 
   return (
@@ -56,7 +61,7 @@ const AccountStep = (props) => {
         </div>
       </div>
       <Form
-        onFinish={onFinish}
+        onFinish={onSubmit}
         className="form-group"
         name="register"
         initialValues={{
@@ -73,7 +78,12 @@ const AccountStep = (props) => {
             },
           ]}
         >
-          <Input placeholder="Full name" className="auth-input" />
+          <TextField
+            id="fullname"
+            label="Full name"
+            variant="outlined"
+            className="auth-input"
+          />
         </Form.Item>
         <Form.Item
           name="email"
@@ -84,7 +94,12 @@ const AccountStep = (props) => {
             },
           ]}
         >
-          <Input placeholder="Email address" className="auth-input" />
+          <TextField
+            id="email_address"
+            label="Email Address"
+            variant="outlined"
+            className="auth-input"
+          />
         </Form.Item>
 
         <Form.Item
@@ -96,7 +111,12 @@ const AccountStep = (props) => {
             },
           ]}
         >
-          <Input placeholder="Phone number" className="auth-input" />
+          <TextField
+            id="phone_number"
+            label="Phone Number"
+            variant="outlined"
+            className="auth-input"
+          />
         </Form.Item>
 
         <Form.Item
@@ -108,7 +128,13 @@ const AccountStep = (props) => {
             },
           ]}
         >
-          <Input.Password placeholder="Password" className="auth-input" />
+          <TextField
+            id="password"
+            label="Password"
+            variant="outlined"
+            className="auth-input"
+            type="password"
+          />
         </Form.Item>
 
         <Form.Item
@@ -133,9 +159,12 @@ const AccountStep = (props) => {
             }),
           ]}
         >
-          <Input.Password
-            placeholder="Comfirm Password"
+          <TextField
+            id="password"
+            label="Comfirm Password"
+            variant="outlined"
             className="auth-input"
+            type="password"
           />
         </Form.Item>
 

@@ -9,9 +9,6 @@
 }
 
 .verify {
-}
-
-.form-wrapper {
   width: 500px;
   margin: 50px 0px;
   padding: 40px;
@@ -62,7 +59,7 @@
       margin: 15px 0 5px 0;
       display: flex;
       justify-content: space-between;
-      //background-color: transparent;
+      background-color: #fff !important;
     }
 
     .otp-input {

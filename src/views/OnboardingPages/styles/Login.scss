@@ -1,6 +1,6 @@
 .login {
   text-align: center;
-  padding: 40px;
+  padding: 20px 40px 40px 40px;
   .d-flex {
     display: flex;
     flex-direction: column;
@@ -8,7 +8,7 @@
   }
   .form-wrapper {
     width: 500px;
-    margin: 50px 0px;
+    margin: 30px 0px;
     padding: 40px;
     box-shadow: 10px 30px 60px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
@@ -38,7 +38,7 @@
         height: 56px;
         width: 100%;
         background: rgba(5, 36, 66, 0.05);
-        border: 1px solid #bdbdbd;
+        // border: 1px solid #bdbdbd;
         box-sizing: border-box;
         border-radius: 5px;
         font-size: 18px;

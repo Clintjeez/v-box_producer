@@ -1,4 +1,4 @@
-export const baseUrl = "http://www.vbox.media/api/";
+export const baseUrl = "https://www.vbox.media/api/";
 
 export const signupUrl = `${baseUrl}users/signup`;
 export const verifyRequestUrl = `${baseUrl}users/request/verification`;

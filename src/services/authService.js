@@ -25,7 +25,7 @@ export const verifyHandler = (data) => {
   });
 };
 
-export const signinHandler = (data) => {
+export const loginHandler = (data) => {
   return axios({
     method: "post",
     url: urls.signinUrl,

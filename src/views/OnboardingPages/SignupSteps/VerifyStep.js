@@ -1,14 +1,38 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import OtpInput from "react-otp-input";
-import { Form, Button, Input } from "antd";
+import { Form, Button } from "antd";
+import { verifyHandler } from "../../../services/authService";
+import { notification } from "antd";
 
 import "../styles/Verify.scss";
 
 const VerifyStep = (props) => {
   const [otp, setOtp] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const onSubmit = async () => {
+    setLoading(true);
+    await verifyHandler(otp)
+      .then((res) => {
+        console.log(res);
+        notification.success({
+          message: "Success",
+          description: "Account verified",
+        });
+        props.next();
+      })
+      .catch((err) => {
+        // console.log(err.response.data);
+        notification.error({
+          message: "Error",
+          description: "An error occured",
+        });
+      });
+    setLoading(false);
+  };
   return (
-    <div className="verify form-wrapper">
+    <div className="verify">
       <div className="form-header">
         <div className="header-txt">
           <h3>Sign Up</h3>
@@ -41,7 +65,7 @@ const VerifyStep = (props) => {
           </Form.Item>
           <Form.Item>
             <Button
-              onClick={props.next}
+              onClick={onSubmit}
               type="primary"
               htmlType="submit"
               className="auth-btn"

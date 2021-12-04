@@ -7,6 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 import LandingPage from "./views/LandingPage";
 import Auth from "./views/OnboardingPages/Auth";
+import AuthGuard from "./components/AuthGuard";
 import Dashboard from "./views/Dashboard";
 
 const App = () => {
@@ -20,9 +21,15 @@ const App = () => {
           <Route exact path="/login">
             <Auth />
           </Route>
-          <Route>
-            <Dashboard />
+          <Route exact path="/signup">
+            <Auth />
           </Route>
+          <AuthGuard>
+            <Dashboard />
+          </AuthGuard>
+          {/* <Route>
+            <Dashboard />
+          </Route> */}
         </Switch>
       </Router>
     </>

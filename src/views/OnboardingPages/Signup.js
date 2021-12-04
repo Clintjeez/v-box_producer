@@ -7,14 +7,13 @@ import VerifyStep from "./SignupSteps/VerifyStep";
 import AccountStep from "./SignupSteps/AccountStep";
 import FinalStep from "./SignupSteps/FinalStep";
 
-import "./styles/Signup.scss";
+//import "./styles/Signup.scss";
 
 const Signup = ({ history }) => {
   return (
     <div className="wrapper">
       <div className="container d-flex">
         <Steps>
-          {/* <Step component={SignupStep} /> */}
           <Step component={AccountStep} />
           <Step component={VerifyStep} />
           <Step component={FinalStep} />

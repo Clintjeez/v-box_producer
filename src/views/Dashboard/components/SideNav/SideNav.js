@@ -10,23 +10,10 @@ import logout_icon from "../../../../assets/dasboard-icons/logout-icon1.png";
 
 import "./SideNav.scss";
 
-let links = [
-  {
-    title: "Dashboard",
-    path: "/dashboard",
-    icon: dashboard_icon,
-  },
-  {
-    title: "Dashboard",
-    path: "/dashboard",
-    icon: dashboard_icon,
-  },
-];
-
 const SideNav = () => {
   return (
     <nav className="sidenav">
-      <Link className="links active" to="/dashboard">
+      <Link className="links" to="/dashboard">
         <img src={dashboard_icon} alt="link icon" />
         <p>Dashboard</p>
       </Link>
