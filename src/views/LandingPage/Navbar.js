@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Typography, Button } from "antd";
 
-import logoIcon from "../../assets/logo-icon.png";
+import logoIcon from "../../assets/logo_new.png";
 
 import "./styles/Navbar.scss";
 
@@ -15,9 +15,6 @@ const Navbar = () => {
             <Link to="/">
               <img src={logoIcon} alt="logo" className="logo-img" />
             </Link>
-            <Typography.Title level={2} className="logo-txt">
-              <Link to="/">V-BOX</Link>
-            </Typography.Title>
           </div>
           <Button className="nav-btn">
             <Link to="/login">SIGN IN</Link>

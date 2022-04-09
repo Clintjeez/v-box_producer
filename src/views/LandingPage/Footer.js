@@ -1,5 +1,5 @@
 import React from "react";
-import logoImg from "../../assets/logo-icon.png";
+import logoImg from "../../assets/logo_new.png";
 import { Link } from "react-router-dom";
 import { Button } from "antd";
 
@@ -14,7 +14,6 @@ const Footer = () => {
           <div className="brand-col">
             <div className="brand-wrapper">
               <img src={logoImg} alt="logo" />
-              <p className="logo-text">V-BOX</p>
             </div>
             <p className="copy-text">
               Copyrights By <strong>VBOX </strong>

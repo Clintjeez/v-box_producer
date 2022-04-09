@@ -13,15 +13,13 @@ import "./styles/Login.scss";
 
 const Login = ({ history }) => {
   const dispatch = useDispatch();
-  const [loginData, setLoginData] = useState({
-    email: "",
-    password: "",
-  });
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
 
   const onSubmit = async () => {
     setLoading(true);
-    const request = loginHandler(loginData);
+    const request = loginHandler(email, password);
 
     try {
       const response = await request;
@@ -72,10 +70,8 @@ const Login = ({ history }) => {
                 label="Email Address"
                 variant="outlined"
                 className="auth-input"
-                value={loginData.email}
-                onChange={(e) =>
-                  setLoginData({ ...loginData, email: e.target.value })
-                }
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               />
             </Form.Item>
 
@@ -94,10 +90,8 @@ const Login = ({ history }) => {
                 type="password"
                 autoComplete="current-password"
                 className="auth-input"
-                value={loginData.password}
-                onChange={(e) =>
-                  setLoginData({ ...loginData, password: e.target.value })
-                }
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
               />
             </Form.Item>
 
