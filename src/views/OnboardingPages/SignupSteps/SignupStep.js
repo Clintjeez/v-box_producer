@@ -23,7 +23,6 @@ const SignupStep = (props) => {
           remember: true,
         }}
         autoComplete="on"
-        //onFinish={onSubmit}
       >
         <Form.Item
           name="phone"
@@ -34,13 +33,6 @@ const SignupStep = (props) => {
             },
           ]}
         >
-          {/* <Input
-            className="auth-input"
-            style={{
-              width: "100%",
-            }}
-            placeholder="Enter Phone Number"
-          /> */}
           <TextField
             id="phone_number"
             label="Phone Number"

@@ -7,7 +7,7 @@ import { notification } from "antd";
 
 import "../styles/Verify.scss";
 
-const VerifyStep = (props) => {
+const VerifyStep = ({ next, otpCode }) => {
   const [otp, setOtp] = useState("");
   const [loading, setLoading] = useState(false);
 
@@ -20,10 +20,10 @@ const VerifyStep = (props) => {
           message: "Success",
           description: "Account verified",
         });
-        props.next();
+        next();
       })
       .catch((err) => {
-        // console.log(err.response.data);
+        console.log(err);
         notification.error({
           message: "Error",
           description: "An error occured",

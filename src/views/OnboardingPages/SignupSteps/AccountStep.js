@@ -7,35 +7,34 @@ import { signupHandler, verifyRequest } from "../../../services/authService";
 
 import "../styles/Signup.scss";
 
-const AccountStep = (props) => {
-  const [loading, setLoading] = useState(false);
+const AccountStep = ({ next, setOtpCode }) => {
+  const [fullname, setFullname] = useState("");
+  const [email, setEmail] = useState("");
+  const [telephone, setTelephone] = useState("");
+  const [password, setPassword] = useState("");
+  const [rpassword, setRpassword] = useState("");
 
-  // const nextSlide = (props) => {
-  //   props.next;
-  // };
+  console.log(fullname, email, telephone, password, rpassword);
 
-  const onSubmit = async (values) => {
+  const onSubmit = async () => {
     const data = {
-      fullname: values.fullname,
-      email: values.email,
-      telephone: values.telephone,
-      password: values.password,
-      rpassword: values.confirm,
+      fullname,
+      email,
+      telephone,
+      password,
+      rpassword,
     };
-    setLoading(true);
+    // setLoading(true);
     await signupHandler(data)
       .then((res) => {
-        console.log(res);
+        setOtpCode(res.data.code);
         notification.success({
           message: "Account created",
-          description: "Your account has been created successfully",
+          description: res.data.message,
         });
-        props.next();
+        next();
       })
-      // await verifyRequest(data.telephone)
-      //   .then((res) => {
-      //     console.log(res);
-      //   })
+
       .catch((err) => {
         console.log("erros", err.response);
         console.log(err.response.data.errors[0]?.message);
@@ -46,7 +45,7 @@ const AccountStep = (props) => {
             : "Error occured",
         });
       });
-    setLoading(false);
+    // setLoading(false);
   };
 
   return (
@@ -83,6 +82,8 @@ const AccountStep = (props) => {
             label="Full name"
             variant="outlined"
             className="auth-input"
+            value={fullname}
+            onChange={(e) => setFullname(e.target.value)}
           />
         </Form.Item>
         <Form.Item
@@ -99,6 +100,8 @@ const AccountStep = (props) => {
             label="Email Address"
             variant="outlined"
             className="auth-input"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
           />
         </Form.Item>
 
@@ -116,6 +119,8 @@ const AccountStep = (props) => {
             label="Phone Number"
             variant="outlined"
             className="auth-input"
+            value={telephone}
+            onChange={(e) => setTelephone(e.target.value)}
           />
         </Form.Item>
 
@@ -134,6 +139,8 @@ const AccountStep = (props) => {
             variant="outlined"
             className="auth-input"
             type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
           />
         </Form.Item>
 
@@ -165,6 +172,8 @@ const AccountStep = (props) => {
             variant="outlined"
             className="auth-input"
             type="password"
+            value={rpassword}
+            onChange={(e) => setRpassword(e.target.value)}
           />
         </Form.Item>
 

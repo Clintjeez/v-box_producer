@@ -24,12 +24,12 @@ const App = () => {
           <Route exact path="/signup">
             <Auth />
           </Route>
-          <AuthGuard>
+          {/* <AuthGuard>
             <Dashboard />
-          </AuthGuard>
-          {/* <Route>
+          </AuthGuard> */}
+          <Route exact>
             <Dashboard />
-          </Route> */}
+          </Route>
         </Switch>
       </Router>
     </>
